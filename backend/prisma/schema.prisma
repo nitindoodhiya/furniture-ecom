@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id      Int     @id @default(autoincrement())
+  email   String  @unique
+  name    String?
+}
+
+model Furniture {
+  id          Int          @id @default(autoincrement())
+  name        String
+  description String?
+  price       Float
+  imageUrl    String?
+  dimensions  String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  orderItems  OrderItem[]  @relation("FurnitureToOrderItems")
+  reviews     Review[]
+}
+
+model Order {
+  id          Int          @id @default(autoincrement())
+  userId      Int
+  user        User         @relation(fields: [userId], references: [id])
+  total       Float?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  orderItems  OrderItem[]        @relation("OrderToOrderItems") 
+}
+
+model OrderItem {
+  id          Int        @id @default(autoincrement())
+  orderId     Int
+  order       Order      @relation("OrderToOrderItems", fields: [orderId], references: [id])
+  furnitureId Int
+  furniture   Furniture  @relation("FurnitureToOrderItems", fields: [furnitureId], references: [id])
+  quantity    Int        @default(1)
+}
+
+model Review {
+  id          Int        @id @default(autoincrement())
+  furnitureId Int
+  furniture   Furniture  @relation(fields: [furnitureId], references: [id])
+  rating      Int
+  comment     String?
+  createdAt   DateTime   @default(now())
+}
