@@ -7,3 +7,9 @@ export const createReview = async (payload: any) => {
   });
   return r;
 };
+
+export const getOne = async (id: number) => {
+  return prisma.review.findUnique({
+    where: { id }
+  });
+};
