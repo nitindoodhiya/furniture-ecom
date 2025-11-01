@@ -1,0 +1,764 @@
+{
+	"info": {
+		"_postman_id": "5d142185-9d06-41d0-8cfe-026bbf9fa28e",
+		"name": "Furniture E-Commerce API",
+		"description": "Collection to test the furniture e-commerce backend running via Docker.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49709343",
+		"_collection_link": "https://bunny-codes-007-5933759.postman.co/workspace/Bunny-Code's-Workspace~b34ac51b-27b7-46ac-8925-15c82f9f6243/collection/49709343-5d142185-9d06-41d0-8cfe-026bbf9fa28e?action=share&source=collection_link&creator=49709343"
+	},
+	"item": [
+		{
+			"name": "Get All Furniture",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/furniture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"furniture"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Furniture",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/furniture",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"furniture"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "903"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"387-kZAV0ke45nvw8EfWHLgIDKOZPL8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 04:51:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Oak Dining Table1\",\n        \"description\": \"Solid oak table for 6 people.\",\n        \"price\": 4991.99,\n        \"imageUrl\": \"https://placebear.com/g/200/200\",\n        \"dimensions\": \"180x90x75 cm\",\n        \"createdAt\": \"2025-10-31T15:46:20.750Z\",\n        \"updatedAt\": \"2025-10-31T15:46:20.750Z\",\n        \"reviews\": [\n            {\n                \"id\": 1,\n                \"furnitureId\": 1,\n                \"rating\": 5,\n                \"comment\": \"Absolutely love this table!\",\n                \"createdAt\": \"2025-11-01T04:51:26.074Z\"\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Oak Dining Table2\",\n        \"description\": \"Solid oak table for 6 people2.\",\n        \"price\": 4992.99,\n        \"imageUrl\": \"https://placebear.com/g/200/200\",\n        \"dimensions\": \"180x90x75 cm\",\n        \"createdAt\": \"2025-10-31T15:46:25.722Z\",\n        \"updatedAt\": \"2025-10-31T15:46:25.722Z\",\n        \"reviews\": []\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Oak Dining Table2\",\n        \"description\": \"Solid oak table for 6 people2.\",\n        \"price\": 4992.99,\n        \"imageUrl\": \"https://placebear.com/g/200/200\",\n        \"dimensions\": \"180x90x75 cm\",\n        \"createdAt\": \"2025-11-01T04:51:05.547Z\",\n        \"updatedAt\": \"2025-11-01T04:51:05.547Z\",\n        \"reviews\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add Furniture",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Oak Dining Table2\",\n  \"description\": \"Solid oak table for 6 people2.\",\n  \"price\": 4992.99,\n  \"imageUrl\": \"https://placebear.com/g/200/200\",\n  \"dimensions\": \"180x90x75 cm\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/furniture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"furniture"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Furniture",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Oak Dining Table2\",\n  \"description\": \"Solid oak table for 6 people2.\",\n  \"price\": 4992.99,\n  \"imageUrl\": \"https://placebear.com/g/200/200\",\n  \"dimensions\": \"180x90x75 cm\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/furniture",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"furniture"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "249"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f9-5d0wlFhfr6zn4TJL7Sl2nEnSnug\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 04:51:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"name\": \"Oak Dining Table2\",\n    \"description\": \"Solid oak table for 6 people2.\",\n    \"price\": 4992.99,\n    \"imageUrl\": \"https://placebear.com/g/200/200\",\n    \"dimensions\": \"180x90x75 cm\",\n    \"createdAt\": \"2025-11-01T04:51:05.547Z\",\n    \"updatedAt\": \"2025-11-01T04:51:05.547Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Furniture by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/furniture/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"furniture",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Furniture by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/furniture/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"furniture",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "262"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"106-HNEwShDWOZbBkY+T2MfOhCbCBac\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 04:51:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"name\": \"Oak Dining Table2\",\n    \"description\": \"Solid oak table for 6 people2.\",\n    \"price\": 4992.99,\n    \"imageUrl\": \"https://placebear.com/g/200/200\",\n    \"dimensions\": \"180x90x75 cm\",\n    \"createdAt\": \"2025-11-01T04:51:05.547Z\",\n    \"updatedAt\": \"2025-11-01T04:51:05.547Z\",\n    \"reviews\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"items\": [\n    { \"furnitureId\": 1, \"quantity\": 2 }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Place Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"items\": [\n        { \"furnitureId\": 2, \"quantity\": 5 }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "441"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b9-6olpuzP1953Dki+R2UQMSkEvTTA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 04:33:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"userId\": 1,\n    \"total\": 24964.95,\n    \"createdAt\": \"2025-11-01T04:33:18.436Z\",\n    \"updatedAt\": \"2025-11-01T04:33:18.436Z\",\n    \"orderItems\": [\n        {\n            \"id\": 2,\n            \"orderId\": 4,\n            \"furnitureId\": 2,\n            \"quantity\": 5,\n            \"furniture\": {\n                \"id\": 2,\n                \"name\": \"Oak Dining Table2\",\n                \"description\": \"Solid oak table for 6 people2.\",\n                \"price\": 4992.99,\n                \"imageUrl\": \"https://placebear.com/g/200/200\",\n                \"dimensions\": \"180x90x75 cm\",\n                \"createdAt\": \"2025-10-31T15:46:25.722Z\",\n                \"updatedAt\": \"2025-10-31T15:46:25.722Z\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 1,\n  \"furnitureId\": 1,\n  \"rating\": 5,\n  \"comment\": \"Absolutely love this table!\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Review",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": 1,\n  \"furnitureId\": 1,\n  \"rating\": 5,\n  \"comment\": \"Absolutely love this table!\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"72-+oyPPZT8/fj5Oa7OkZTDzPob078\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 04:51:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"furnitureId\": 1,\n    \"rating\": 5,\n    \"comment\": \"Absolutely love this table!\",\n    \"createdAt\": \"2025-11-01T04:51:26.074Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Reviews for Furniture",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/reviews/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"reviews",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Reviews for Furniture",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/reviews/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"72-+oyPPZT8/fj5Oa7OkZTDzPob078\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 05:33:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"furnitureId\": 1,\n    \"rating\": 5,\n    \"comment\": \"Absolutely love this table!\",\n    \"createdAt\": \"2025-11-01T04:51:26.074Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"john2@example.com\",\n    \"name\": \"John2 Doe\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"37-LO+eKxYJe7abil6sHcbqaIjIQu0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 05:34:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"email\": \"john2@example.com\",\n    \"name\": \"John2 Doe\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Order By Id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/orders/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orders",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "439"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b7-6G4IXWdOf9hzZUig91uu51xR1Hc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 05:25:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"userId\": 1,\n    \"total\": 9983.98,\n    \"createdAt\": \"2025-10-31T16:06:03.666Z\",\n    \"updatedAt\": \"2025-10-31T16:06:03.666Z\",\n    \"orderItems\": [\n        {\n            \"id\": 1,\n            \"orderId\": 3,\n            \"furnitureId\": 1,\n            \"quantity\": 2,\n            \"furniture\": {\n                \"id\": 1,\n                \"name\": \"Oak Dining Table1\",\n                \"description\": \"Solid oak table for 6 people.\",\n                \"price\": 4991.99,\n                \"imageUrl\": \"https://placebear.com/g/200/200\",\n                \"dimensions\": \"180x90x75 cm\",\n                \"createdAt\": \"2025-10-31T15:46:20.750Z\",\n                \"updatedAt\": \"2025-10-31T15:46:20.750Z\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all Orders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5095"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13e7-o3hbPMseSaAtLyff9+HnKDyErEI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 16:30:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"userId\": 1,\n        \"total\": 9983.98,\n        \"createdAt\": \"2025-10-31T16:06:03.666Z\",\n        \"updatedAt\": \"2025-10-31T16:06:03.666Z\",\n        \"orderItems\": [\n            {\n                \"id\": 1,\n                \"orderId\": 3,\n                \"furnitureId\": 1,\n                \"quantity\": 2,\n                \"furniture\": {\n                    \"id\": 1,\n                    \"name\": \"Oak Dining Table1\",\n                    \"description\": \"Solid oak table for 6 people.\",\n                    \"price\": 4991.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-10-31T15:46:20.750Z\",\n                    \"updatedAt\": \"2025-10-31T15:46:20.750Z\"\n                }\n            }\n        ]\n    },\n    {\n        \"id\": 4,\n        \"userId\": 1,\n        \"total\": 24964.95,\n        \"createdAt\": \"2025-11-01T04:33:18.436Z\",\n        \"updatedAt\": \"2025-11-01T04:33:18.436Z\",\n        \"orderItems\": [\n            {\n                \"id\": 2,\n                \"orderId\": 4,\n                \"furnitureId\": 2,\n                \"quantity\": 5,\n                \"furniture\": {\n                    \"id\": 2,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-10-31T15:46:25.722Z\",\n                    \"updatedAt\": \"2025-10-31T15:46:25.722Z\"\n                }\n            }\n        ]\n    },\n    {\n        \"id\": 5,\n        \"userId\": 1,\n        \"total\": 4991.99,\n        \"createdAt\": \"2025-11-01T07:03:41.114Z\",\n        \"updatedAt\": \"2025-11-01T07:03:41.114Z\",\n        \"orderItems\": [\n            {\n                \"id\": 3,\n                \"orderId\": 5,\n                \"furnitureId\": 1,\n                \"quantity\": 1,\n                \"furniture\": {\n                    \"id\": 1,\n                    \"name\": \"Oak Dining Table1\",\n                    \"description\": \"Solid oak table for 6 people.\",\n                    \"price\": 4991.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-10-31T15:46:20.750Z\",\n                    \"updatedAt\": \"2025-10-31T15:46:20.750Z\"\n                }\n            }\n        ]\n    },\n    {\n        \"id\": 6,\n        \"userId\": 1,\n        \"total\": 44930.91,\n        \"createdAt\": \"2025-11-01T15:53:58.622Z\",\n        \"updatedAt\": \"2025-11-01T15:53:58.622Z\",\n        \"orderItems\": [\n            {\n                \"id\": 4,\n                \"orderId\": 6,\n                \"furnitureId\": 1,\n                \"quantity\": 6,\n                \"furniture\": {\n                    \"id\": 1,\n                    \"name\": \"Oak Dining Table1\",\n                    \"description\": \"Solid oak table for 6 people.\",\n                    \"price\": 4991.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-10-31T15:46:20.750Z\",\n                    \"updatedAt\": \"2025-10-31T15:46:20.750Z\"\n                }\n            },\n            {\n                \"id\": 5,\n                \"orderId\": 6,\n                \"furnitureId\": 3,\n                \"quantity\": 1,\n                \"furniture\": {\n                    \"id\": 3,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-11-01T04:51:05.547Z\",\n                    \"updatedAt\": \"2025-11-01T04:51:05.547Z\"\n                }\n            },\n            {\n                \"id\": 6,\n                \"orderId\": 6,\n                \"furnitureId\": 2,\n                \"quantity\": 2,\n                \"furniture\": {\n                    \"id\": 2,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-10-31T15:46:25.722Z\",\n                    \"updatedAt\": \"2025-10-31T15:46:25.722Z\"\n                }\n            }\n        ]\n    },\n    {\n        \"id\": 7,\n        \"userId\": 1,\n        \"total\": 9985.98,\n        \"createdAt\": \"2025-11-01T16:05:24.051Z\",\n        \"updatedAt\": \"2025-11-01T16:05:24.051Z\",\n        \"orderItems\": [\n            {\n                \"id\": 7,\n                \"orderId\": 7,\n                \"furnitureId\": 3,\n                \"quantity\": 1,\n                \"furniture\": {\n                    \"id\": 3,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-11-01T04:51:05.547Z\",\n                    \"updatedAt\": \"2025-11-01T04:51:05.547Z\"\n                }\n            },\n            {\n                \"id\": 8,\n                \"orderId\": 7,\n                \"furnitureId\": 2,\n                \"quantity\": 1,\n                \"furniture\": {\n                    \"id\": 2,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-10-31T15:46:25.722Z\",\n                    \"updatedAt\": \"2025-10-31T15:46:25.722Z\"\n                }\n            }\n        ]\n    },\n    {\n        \"id\": 8,\n        \"userId\": 1,\n        \"total\": 24964.95,\n        \"createdAt\": \"2025-11-01T16:05:43.881Z\",\n        \"updatedAt\": \"2025-11-01T16:05:43.881Z\",\n        \"orderItems\": [\n            {\n                \"id\": 9,\n                \"orderId\": 8,\n                \"furnitureId\": 2,\n                \"quantity\": 1,\n                \"furniture\": {\n                    \"id\": 2,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-10-31T15:46:25.722Z\",\n                    \"updatedAt\": \"2025-10-31T15:46:25.722Z\"\n                }\n            },\n            {\n                \"id\": 10,\n                \"orderId\": 8,\n                \"furnitureId\": 3,\n                \"quantity\": 4,\n                \"furniture\": {\n                    \"id\": 3,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-11-01T04:51:05.547Z\",\n                    \"updatedAt\": \"2025-11-01T04:51:05.547Z\"\n                }\n            }\n        ]\n    },\n    {\n        \"id\": 9,\n        \"userId\": 1,\n        \"total\": 9985.98,\n        \"createdAt\": \"2025-11-01T16:06:38.228Z\",\n        \"updatedAt\": \"2025-11-01T16:06:38.228Z\",\n        \"orderItems\": [\n            {\n                \"id\": 11,\n                \"orderId\": 9,\n                \"furnitureId\": 3,\n                \"quantity\": 1,\n                \"furniture\": {\n                    \"id\": 3,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-11-01T04:51:05.547Z\",\n                    \"updatedAt\": \"2025-11-01T04:51:05.547Z\"\n                }\n            },\n            {\n                \"id\": 12,\n                \"orderId\": 9,\n                \"furnitureId\": 2,\n                \"quantity\": 1,\n                \"furniture\": {\n                    \"id\": 2,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-10-31T15:46:25.722Z\",\n                    \"updatedAt\": \"2025-10-31T15:46:25.722Z\"\n                }\n            }\n        ]\n    },\n    {\n        \"id\": 10,\n        \"userId\": 1,\n        \"total\": 4992.99,\n        \"createdAt\": \"2025-11-01T16:07:38.083Z\",\n        \"updatedAt\": \"2025-11-01T16:07:38.083Z\",\n        \"orderItems\": [\n            {\n                \"id\": 13,\n                \"orderId\": 10,\n                \"furnitureId\": 2,\n                \"quantity\": 1,\n                \"furniture\": {\n                    \"id\": 2,\n                    \"name\": \"Oak Dining Table2\",\n                    \"description\": \"Solid oak table for 6 people2.\",\n                    \"price\": 4992.99,\n                    \"imageUrl\": \"https://placebear.com/g/200/200\",\n                    \"dimensions\": \"180x90x75 cm\",\n                    \"createdAt\": \"2025-10-31T15:46:25.722Z\",\n                    \"updatedAt\": \"2025-10-31T15:46:25.722Z\"\n                }\n            }\n        ]\n    }\n]"
+				}
+			]
+		}
+	]
+}
